@@ -1,0 +1,102 @@
+# index.mdx STARTS HERE
+
+title: Home
+description: Documentation for Home page
+
+Welcome to the Docs!
+
+Explore everything you need to know about this project! This documentation is here to help you get started, understand the tools, and make the most out of your experience.
+
+---
+
+🚀 What’s Next?
+
+This project is created by Tania Lapalelo using Nextjs. Here are some helpful links to guide you:
+
+<Cards>
+  <Card title="📚 Learn more about Next.js" href="https://nextjs.org/docs" />
+  <Card title="📝 Learn more about Mantine UI" href="https://mantine.dev/" />
+  <Card title="📝 Learn more about Fumadocs" href="https://fumadocs.vercel.app" />
+</Cards>
+
+---
+
+## 📖 Write your own documentation
+
+1. Open the /content/docs directory.
+2. Start writing your markdown or MDX files.
+3. Customize this page and create new pages for your documentation.
+
+**Tip**: Use interactive components like `<Card>`, `<Button>`, or `<Tabs>` to make your documentation more engaging.
+
+---
+
+## 💡 Need Help?
+
+- Check the [Next.js Documentation](https://nextjs.org/docs) for general framework knowledge.
+- Learn about [Fumadocs](https://fumadocs.vercel.app) for building powerful documentation sites.
+- Contact our support team via email or join the community forum.
+
+---
+
+Let us know how we can 
+
+
+# index.mdx ENDS HERE
+
+
+# project.mdx STARTS HERE
+
+---
+title: Projects
+description: Documentation for the Projects page
+---
+
+# Projects Page
+
+The **Projects Page** showcases a list of projects with their respective technologies and descriptions. This page provides an overview of your work, allowing visitors to explore your skills and contributions.
+
+## Features
+
+Dynamic Table: Displays a list of projects with columns for:
+  - Name: The name of the project (clickable for more details).
+  - Tech Stack: The technologies used in the project.
+  - Description: A short summary of the project's purpose or features.
+Responsive Design: The table adapts to different screen sizes, ensuring accessibility across devices.
+Highlighted Featured Project: Projects marked as "Featured" are displayed with a badge for emphasis.
+
+## Code Example
+
+Below is an example of how the table is implemented:
+
+"use client"
+
+import { projects } from '@/constant';
+import { Table } from '@mantine/core'
+
+const page = () => {
+  const rows = projects.map((project) => (
+    <Table.Tr key={project.id}>
+      <Table.Td>{project.name}</Table.Td>
+      <Table.Td>{project.techStack}</Table.Td>
+      <Table.Td>{project.description}</Table.Td>
+    </Table.Tr>
+  ));
+  return (
+    
+    <Table striped highlightOnHover>
+      <Table.Thead>
+        <Table.Tr>
+          <Table.Th>Name</Table.Th>
+          <Table.Th>Tech Stack</Table.Th>
+          <Table.Th>Description</Table.Th>
+        </Table.Tr>
+      </Table.Thead>
+      <Table.Tbody>{rows}</Table.Tbody>
+    </Table>
+  )
+}
+
+export default page
+
+# project.mdx ENDS HERE
