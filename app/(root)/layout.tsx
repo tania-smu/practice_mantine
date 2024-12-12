@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
-
+import { MantineProvider } from "@mantine/core";
+import '@mantine/core/styles.css';
 
 export default function Layout({
     children,
@@ -7,6 +8,8 @@ export default function Layout({
     children: React.ReactNode;
 }>) {
     return (
-        <Navigation>{children}</Navigation>
+        <MantineProvider defaultColorScheme="auto">
+            <Navigation>{children}</Navigation>
+        </MantineProvider>
     );
 }

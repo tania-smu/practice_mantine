@@ -1,0 +1,52 @@
+---
+title: Projects
+description: Documentation for the Projects page
+---
+
+# Projects Page
+
+The **Projects Page** showcases a list of projects with their respective technologies and descriptions. This page provides an overview of your work, allowing visitors to explore your skills and contributions.
+
+## Features
+
+- **Dynamic Table**: Displays a list of projects with columns for:
+  - **Name**: The name of the project (clickable for more details).
+  - **Tech Stack**: The technologies used in the project.
+  - **Description**: A short summary of the project's purpose or features.
+- **Responsive Design**: The table adapts to different screen sizes, ensuring accessibility across devices.
+- **Highlighted Featured Project**: Projects marked as "Featured" are displayed with a badge for emphasis.
+
+## Code Example
+
+Below is an example of how the table is implemented:
+
+```jsx
+"use client"
+
+import { projects } from '@/constant';
+import { Table } from '@mantine/core'
+
+const page = () => {
+  const rows = projects.map((project) => (
+    <Table.Tr key={project.id}>
+      <Table.Td>{project.name}</Table.Td>
+      <Table.Td>{project.techStack}</Table.Td>
+      <Table.Td>{project.description}</Table.Td>
+    </Table.Tr>
+  ));
+  return (
+    
+    <Table striped highlightOnHover>
+      <Table.Thead>
+        <Table.Tr>
+          <Table.Th>Name</Table.Th>
+          <Table.Th>Tech Stack</Table.Th>
+          <Table.Th>Description</Table.Th>
+        </Table.Tr>
+      </Table.Thead>
+      <Table.Tbody>{rows}</Table.Tbody>
+    </Table>
+  )
+}
+
+export default page

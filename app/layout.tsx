@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ColorSchemeScript, MantineProvider } from "@mantine/core";
-import '@mantine/core/styles.css';
+import { ColorSchemeScript } from "@mantine/core";
 
 
 export const metadata: Metadata = {
@@ -19,8 +18,11 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript defaultColorScheme="auto" />
       </head>
-      <body>
-        <MantineProvider defaultColorScheme="auto">{children}</MantineProvider>
+      <body className="flex flex-col min-h-screen">
+          {/* <MantineProvider defaultColorScheme="auto"> */}
+            {children}
+          {/* </MantineProvider> */}
+      
       </body>
     </html>
   );
