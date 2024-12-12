@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import '@mantine/core/styles.css';
+import { RootProvider } from "fumadocs-ui/provider";
 
 
 export const metadata: Metadata = {
@@ -19,8 +20,12 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript defaultColorScheme="auto" />
       </head>
+
       <body>
-        <MantineProvider defaultColorScheme="auto">{children}</MantineProvider>
+        <RootProvider>
+          <MantineProvider defaultColorScheme="auto">{children}</MantineProvider>
+        </RootProvider>
+
       </body>
     </html>
   );
