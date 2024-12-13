@@ -1,4 +1,4 @@
-# index.mdx STARTS HERE
+NOTEEEE: welcome.mdx STARTS HERE
 
 title: Home
 description: Documentation for Home page
@@ -39,18 +39,12 @@ This project is created by Tania Lapalelo using Nextjs. Here are some helpful li
 
 ---
 
-Let us know how we can 
+Let me know what you think 😉
+
+NOTEEEE: welcome.mdx ENDS HERE
 
 
-# index.mdx ENDS HERE
-
-
-# project.mdx STARTS HERE
-
----
-title: Projects
-description: Documentation for the Projects page
----
+NOTEEEE: project.mdx STARTS HERE
 
 # Projects Page
 
@@ -65,7 +59,7 @@ Dynamic Table: Displays a list of projects with columns for:
 Responsive Design: The table adapts to different screen sizes, ensuring accessibility across devices.
 Highlighted Featured Project: Projects marked as "Featured" are displayed with a badge for emphasis.
 
-## Code Example
+Code Example
 
 Below is an example of how the table is implemented:
 
@@ -99,4 +93,4 @@ const page = () => {
 
 export default page
 
-# project.mdx ENDS HERE
+NOTEEEE: project.mdx ENDS HERE
